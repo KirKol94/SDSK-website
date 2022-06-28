@@ -1,0 +1,17 @@
+include ../../dates/warehouse-items
+section.warehouse
+    .container.warehouse__wrapper
+        h1.title.warehouse__title Склад готовой продукции
+        .swiper.warehouse__wrapper-big.js-warehouse-swiper-big(style='--swiper-navigation-color: #fff; --swiper-pagination-color: #fff')
+            .swiper-wrapper.warehouse__items-big
+                each item in warehouseItems
+                  .swiper-slide.warehouse__item-big
+                      img(src= item.img alt= item.alt)
+            .swiper-button-next.warehouse__next.warehouse__control-slider
+            .swiper-button-prev.warehouse__prev.warehouse__control-slider
+
+        .swiper.js-warehouse-swiper-small(thumbsslider)
+            .swiper-wrapper.warehouse__items-small
+                each item in warehouseItems
+                  .swiper-slide.warehouse__item-small
+                      img(src= item.img alt= item.alt)

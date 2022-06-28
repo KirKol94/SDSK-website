@@ -1,0 +1,118 @@
+.main-catalog {
+  margin-top: $size-13xl;
+
+  @include desktop {
+    margin-top: $size-22xl;
+  }
+
+  &__wrapper {
+    margin-top: $size-6xl;
+
+    @include desktop {
+      margin-top: $size-12xl;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    & > :nth-child(1n+7) {
+      display: none;
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+
+      & > :nth-child(1n+7) {
+        display: flex;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $size-m;
+    border: $border;
+
+    @include desktop {
+      padding: $size-10xl $size-10xl $size-8xl;
+
+      &:hover {
+        background-color: $firm;
+
+        & > button {
+          background-color: $dark-firm;
+        }
+
+        .main-catalog__cost {
+          color: $white;
+        }
+      }
+
+    }
+  }
+
+  &__name {
+    margin-top: $size-6xl;
+    font-size: $fs-l;
+    line-height: 120%;
+
+    @include desktop {
+      font-size: $fs-xl;
+    }
+  }
+
+  &__description {
+    margin-top: $size-xs;
+    color: $gray;
+    font-size: $fs-xxs;
+    line-height: 125%;
+
+    @include desktop {
+      font-size: $fs-s;
+      line-height: 130%;
+    }
+  }
+
+  &__cost {
+    display: inline-block;
+    margin-top: $size-s;
+    color: $firm;
+    font-weight: 500;
+    font-size: $fs-m;
+    line-height: 120%;
+
+    @include desktop {
+      margin-top: $size-2xl;
+      font-size: $fs-xxl;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    margin-top: $size-2xl;
+    padding: $size-xls $size-m;
+    font-size: $fs-xs;
+
+    @include desktop {
+      margin-top: $size-6xl;
+      padding: $size-xs $size-4xls;
+      font-size: $fs-m;
+    }
+  }
+
+  &__all-catalog-btn {
+    margin-top: $size-6xl;
+
+    @include desktop {
+      margin-top: $size-10xl;
+    }
+  }
+}

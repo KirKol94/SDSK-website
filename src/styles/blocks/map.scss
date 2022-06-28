@@ -1,0 +1,46 @@
+.map {
+  margin-top: $size-16xls;
+  @include desktop {
+    margin-top: $size-22xl;
+  }
+
+  &__title {
+    font-size: $fs-xxxxl;
+    @include desktop {
+      font-size: $fs-xxxxxxxxxls;
+    }
+
+    &-desktop {
+      display: none;
+      @include desktop {
+        display: block;
+      }
+    }
+
+    &-mobile {
+      display: block;
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__img-big, &__img-small {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__img-big {
+    display: none;
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &__img-small {
+    display: block;
+    @include desktop {
+      display: none;
+    }
+  }
+}

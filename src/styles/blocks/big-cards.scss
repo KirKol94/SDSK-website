@@ -1,0 +1,54 @@
+.big-cards {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
+
+    &:nth-child(even) {
+      @include tablet {
+        flex-direction: row-reverse;
+      }
+    }
+
+    & > * {
+      border: $border;
+    }
+  }
+
+  &__item-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $size-2xl;
+    font-size: $fs-s;
+    line-height: 130%;
+    background-color: $black;
+    @include desktop {
+      padding: $size-13xl;
+      font-size: $fs-xxl;
+      line-height: 150%;
+    }
+  }
+
+  &__item-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $size-m;
+    @include tablet {
+      padding: $size-13xl;
+    }
+
+    & > ._img {
+      @include tablet {
+        min-width: 300px;
+      }
+      @include desktop {
+        min-width: 544px;
+        max-width: 668px;
+      }
+    }
+  }
+}

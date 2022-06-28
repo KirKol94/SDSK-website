@@ -1,0 +1,55 @@
+include ../../dates/footer-nav-links
+include ../../dates/footer-goods
+
+section.footer-middle
+    .container.footer-middle__wrapper
+        .footer-middle__navs
+            .footer-middle__nav
+                nav.nav.footer-middle__nav.footer-middle__nav-tablet
+                    ul.nav__list
+                        each item in footerNavLinks
+                            li.nav__item
+                                if item.img
+                                    img(src=item.img alt=item.name).nav__img._img
+                                    img(src=item.imgHover alt=item.name).nav__img._img-hover
+                                a(href=item.url).nav__link= item.name
+                nav.nav.footer-middle__nav.footer-middle__nav-mobile
+                    ul.nav__list
+                        li.nav__item.footer-middle__nav-mobile-item
+                            img(src='./svg/sprite.svg#grid-view' alt='Иконка каталога').nav__img._img
+                            img(src='./svg/sprite.svg#grid-view-hover' alt='Иконка каталога').nav__img._img-hover
+                            a(href='catalog.pug').nav__link Каталог
+                        li.nav__item.footer-middle__nav-mobile-item
+                            img(src='./svg/sprite.svg#document' alt='Иконка прайс-листа').nav__img._img
+                            img(src='./svg/sprite.svg#document-hover' alt='Иконка прайс-листа').nav__img._img-hover
+                            a(href='prices.pug').nav__link Прайс
+
+            .footer-middle__goods
+                .footer-middle__goods-group
+                    ul.footer-middle__goods-list
+                        each good in footerGoodsItems1
+                            li.footer-middle__goods-item
+                                a(href= good.url).footer-middle__goods-link= good.name
+                .footer-middle__goods-group
+                    ul.footer-middle__goods-list
+                        each good in footerGoodsItems2
+                            li.footer-middle__goods-item
+                                a(href= good.url).footer-middle__goods-link= good.name
+                .footer-middle__goods-group
+                    ul.footer-middle__goods-list
+                        each good in footerGoodsItems3
+                            li.footer-middle__goods-item
+                                a(href= good.url).footer-middle__goods-link= good.name
+
+        .footer-middle__contacts
+            .footer-middle__contacts-top
+                .footer-middle__contacts-group
+                    a(href='tel:+7(922)202-01-90').footer-middle__contacts-phone +7 (922) 202-01-90
+                    a(href='mailto:zdsk.pg@yandex.ru').footer-middle__contacts-email zdsk.pg@yandex.ru
+                .footer-middle__contacts-group
+                    a(href='tel:+7(922)181-81-58').footer-middle__contacts-phone +7 (922) 181-81-58
+                    a(href='mailto:zdsk.pg@yandex.ru').footer-middle__contacts-email zdsk87@mail.ru
+            .footer-middle__contacts-group
+                .footer-middle__contacts-address
+                    img(src='./svg/sprite.svg#location').footer-middle__contacts-img
+                    span Арамиль <br> Базовая, 2а

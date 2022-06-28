@@ -1,0 +1,20 @@
+include ../../dates/about-about-items
+
+section.a-about
+    .container.a-about__wrapper
+        .breadrumbs.a-about__breadrumbs
+            a(href='index.pug').breadrumbs__item._link главная
+            span.breadrumbs__item —
+            span.breadrumbs__item о производстве
+
+        .a-about__about
+            h1.title.a-about__title О производстве
+
+            .a-about__items
+                each item in aboutItems
+                    .a-about__item
+                        .a-about__item-top
+                            img(src=item.img alt=item.name).a-about__item-img
+                            p.a-about__item-name= item.name
+                        .a-about__item-bottom
+                            a(href='#').btn.btn-contained.a-about__item-btn Подробнее

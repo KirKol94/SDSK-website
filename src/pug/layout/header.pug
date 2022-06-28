@@ -1,0 +1,47 @@
+include ../dates/nav-links
+
+header.header
+    .contact-line.header__contact-line
+        .contact-line__wrapper.container
+            .contact-line__left
+                span.contact-line__item Арамиль, Базовая, 2а
+                a.contact-line__item.__link(href='mailto: ooo.zdsk@bk.ru' title='Оправить письмо') ooo.zdsk@bk.ru
+                a.contact-line__item.__link(href='tel:+79221818126' title='Позвонить') 7 922 18-18-126
+            .contact-line__right
+                a.contact-line__item.__link.contact-line__right--phone(href='tel:+79221818126' title='Позвонить') 7 922 18-18-126
+                a.contact-line__item.__link(href='mailto: ooo.zdsk@bk.ru' title='Оправить письмо') zdsk.pg@yandex.ru
+                a.contact-line__item.__link.contact-line__right--phone(href='tel:+79221818126' title='Позвонить') 7 922 18-18-126
+                a.contact-line__item.__link(href='mailto: ooo.zdsk@bk.ru' title='Оправить письмо') zdsk.pg@yandex.ru
+
+    .navigation-line.header__navigation-line
+        .navigation-line__wrapper.container
+            .navigation-line__left
+                a.logo.navigation-line__logo(href='index.html' title='На главную')
+                    img.logo__img(src='./svg/sprite.svg#logo' alt='Логотип')
+                    abbr.logo__text ЗДСК
+                    .logo__description.header__logo-description
+                        span Производство
+                        span железобетонных
+                        span конструкций
+
+            .navigation-line__right
+                nav.nav.navigation-line__nav.header__nav
+                    ul.nav__list.nav__desktop-list
+                        each item in navLinks
+                            li.nav__item
+                                if item.img
+                                    img(src=item.img).nav__img._img
+                                    img(src=item.imgHover).nav__img._img-hover
+                                a.nav__link(href=item.url title=`На страницу ${item.name.toLowerCase()}`)= item.name.toUpperCase()
+                    ul.nav__list.nav__mobile-list
+                        li.nav__item
+                            a(href='tel: +79221818126').nav__link.nav__mobile-link
+                                img(src='./svg/sprite.svg#phone').nav__mobile-img
+                        li.nav__item
+                            a(href='search.pug').nav__link.nav__mobile-link
+                                img(src='./svg/sprite.svg#search').nav__mobile-img
+                        li.nav__item
+                            a(href='#').nav__link.js-menu-burger.nav__mobile-link
+                                img(src='./svg/sprite.svg#burger').nav__mobile-img
+
+include menu

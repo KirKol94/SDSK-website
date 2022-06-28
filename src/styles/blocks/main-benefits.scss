@@ -1,0 +1,74 @@
+.main-benefits {
+  &__wrapper {
+    margin-top: $size-20xls;
+    @include desktop {
+      margin-top: $size-23xl;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: $size-6xl;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: $size-12xl;
+    }
+  }
+
+  &__item {
+    padding: $size-2xl;
+    border: $border;
+    @include desktop {
+      padding: $size-12xl;
+
+      &:hover {
+        background-color: $firm;
+
+        ._img {
+          display: none;
+        }
+
+        ._img-hover {
+          display: inline-block;
+        }
+      }
+
+    }
+
+    ._img-hover {
+      display: none;
+    }
+  }
+
+  &__img {
+    width: $size-13xl;
+    @include desktop {
+      width: $size-20xxl;
+    }
+  }
+
+  &__name {
+    margin-top: $size-2xl;
+    font-weight: 500;
+    font-size: $fs-l;
+    @include desktop {
+      margin-top: $size-16xl;
+      font-size: $fs-xxxl;
+    }
+  }
+
+  &__description {
+    margin-top: $size-2xl;
+    color: $light-gray;
+    font-size: $fs-xxs;
+    line-height: 130%;
+    @include desktop {
+      font-size: $fs-s;
+      line-height: 150%;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.title {
+  color: $white;
+  font-weight: 400;
+  font-size: $fs-xxxxl;
+  line-height: 120%;
+
+  @include tablet {
+    font-size: $fs-xxxxxxxxl;
+  }
+}

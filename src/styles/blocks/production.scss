@@ -1,0 +1,102 @@
+.production {
+  &__items {
+    display: flex;
+    flex-direction: column;
+    margin-top: $size-6xl;
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include desktop {
+      margin-top: $size-10xl;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: $size-2xl $size-2xl $size-5xl;
+    border: $border;
+    @include tablet {
+      align-items: center;
+    }
+    @include desktop {
+      padding: $size-13xl;
+    }
+  }
+
+  &__head {
+    color: $firm;
+    font-weight: 500;
+    font-size: $fs-xxxxxxxxxxl;
+
+    @include desktop {
+      font-size: $fs-xxxxxxxxxxxl;
+    }
+  }
+
+  &__description {
+    font-size: $fs-l;
+    @include desktop {
+      margin-top: $size-6xl;
+      font-size: $fs-xxxxxxl;
+    }
+
+    & > ._sup {
+      margin-right: $size-xs;
+      font-size: $fs-l;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__info-title {
+    max-width: 116px;
+    font-weight: 500;
+    font-size: $fs-l;
+    @include desktop {
+      min-width: 203px;
+      max-width: 100%;
+      font-size: $fs-xxxxxxl;
+    }
+  }
+
+  &__list {
+    margin-top: $size-xs;
+    @include desktop {
+      width: 324px;
+      margin-top: $size-9xl;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: $size-9xl;
+    font-size: $fs-s;
+    line-height: 140%;
+
+    &::before {
+      position: absolute;
+      top: $size-xl;
+      left: 0;
+      width: $size-5xl;
+      height: $size-xxxs;
+      color: $firm;
+      background-color: $firm;
+      content: '';
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $size-5xl;
+    }
+    @include desktop {
+      font-size: $fs-xxl;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+section.footer-feedback
+	.container
+		h1.title.footer-feedback__title Связаться с нами
+		form.footer-feedback__form.js-feedback-form
+			.footer-feedback__form-top
+				input(name='name' type='text' placeholder='Имя' pattern="[А-Яа-яa-zA-Z\-\s]*" required='true' title='Только буквы русского и латинского алфавита').footer-feedback__input
+				input(name='email' type='email' placeholder='Email' required='true').footer-feedback__input
+			textarea(name="message" placeholder='Ваше сообщение' required='true').footer-feedback__textarea
+			.footer-feedback__form-bottom
+				button(type='submit').btn.btn-contained.btn-with-img.js-feedback-btn
+					img(src="./svg/sprite.svg#send" alt="").btn__icon
+					span Отправить
+				.footer-feedback__privacy-policy
+					input(type="checkbox" id='feedbackCheckbox' name='checkIAgree').footer-feedback__privacy-input
+					label(for="feedbackCheckbox").footer-feedback__privacy-label Я согласен  с
+						a(href="#").footer-feedback__privacy-link политикой конфиденциальности и использования запрашиваемых данных

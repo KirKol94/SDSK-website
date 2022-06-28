@@ -1,0 +1,47 @@
+.btn {
+  padding: $size-s $size-6xl;
+  font-size: $fs-xl;
+  border: $size-xxxs solid $firm;
+  border-radius: $size-xxxs;
+
+  @include desktop {
+    &:hover {
+      color: $white;
+      background-color: $dark-firm;
+      border: $size-xxxs solid $dark-firm;
+    }
+  }
+
+  &-outlined {
+    color: $firm;
+    background: transparent;
+  }
+
+  &-contained {
+    color: $white;
+    background: $firm;
+  }
+
+  &-w100 {
+    display: block;
+    width: 100%;
+    padding: $size-xm 0;
+    @include desktop {
+      padding: $size-l 0;
+    }
+  }
+
+  &-with-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    width: $size-l;
+    margin-right: $size-m;
+    @include desktop {
+      width: $size-2xl;
+    }
+  }
+}

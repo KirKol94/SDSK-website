@@ -1,0 +1,15 @@
+.main-about {
+  &__wrapper {
+    margin-top: $size-20xls;
+    @include desktop {
+      margin-top: $size-23xl;
+    }
+  }
+
+  &__big-cards {
+    margin-top: $size-6xl;
+    @include desktop{
+      margin-top: $size-12xl;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.a-about {
+  &__breadrumbs {
+    padding: $size-2xl 0;
+    @include desktop {
+      padding: $size-6xl 0;
+    }
+  }
+
+  &__title {
+    margin-top: $size-xs;
+    font-size: $fs-xxxxl;
+    @include desktop {
+      margin-top: $size-12xl;
+      font-size: $fs-xxxxxxxxxl;
+    }
+  }
+
+  &__items {
+    display: flex;
+    margin-top: $size-6xl;
+    overflow-x: auto;
+    @include desktop {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: $size-10xl;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $size-2xl;
+    border: $border;
+    @include desktop {
+      padding: $size-12xl;
+    }
+  }
+
+  &__item-img {
+    max-width: 219px;
+    @include desktop {
+      max-width: 100%;
+    }
+  }
+
+  &__item-name {
+    margin-top: $size-4xl;
+    font-weight: 500;
+    font-size: $fs-xl;
+    @include desktop {
+      margin-top: $size-10xl;
+      font-size: $fs-xxxxxxxl;
+    }
+  }
+
+  &__item-btn {
+    display: inline-block;
+    margin-top: $size-2xl;
+    font-size: $fs-s;
+    @include desktop {
+      margin-top: $size-10xl;
+      font-size: $fs-m;
+    }
+  }
+}

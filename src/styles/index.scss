@@ -1,0 +1,43 @@
+@import './common/fonts';
+@import './common/vars';
+@import './common/mixins';
+@import './common/general';
+
+@import './blocks/container';
+@import './blocks/svg';
+@import './blocks/logo';
+@import 'blocks/title';
+@import 'blocks/btn';
+@import 'blocks/swiper';
+@import './blocks/nav';
+@import './blocks/menu';
+@import './blocks/big-cards';
+@import './blocks/breadcrumbs';
+@import './blocks/contact-line';
+@import './blocks/navigation-line';
+@import './blocks/header';
+
+// ГЛАВНАЯ
+@import './blocks/main-intro';
+@import './blocks/main-catalog';
+@import './blocks/main-about';
+@import './blocks/main-benefits';
+@import './blocks/main-news';
+
+// О ПРОИЗВОДСТВЕ
+@import './blocks/a-about';
+@import './blocks/warehouse';
+@import 'blocks/map';
+@import './blocks/production';
+@import './blocks/delivery';
+@import './blocks/thanks-letters';
+
+// FOOTER
+@import './blocks/footer-feedback';
+@import './blocks/footer-top';
+@import './blocks/footer-middle';
+@import './blocks/footer-down';
+
+// modals
+@import './blocks/modal';
+@import './blocks/feedback-modal';

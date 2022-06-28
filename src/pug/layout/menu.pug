@@ -1,0 +1,10 @@
+.menu.js-menu.menu-hidden
+    .menu__layout.js-menu-layout
+        .menu__content.js-menu-content
+            nav.nav
+                ul.nav__list.menu__items
+                    each item in navLinks
+                      li.nav__item.menu__item
+                          if item.img
+                              img.nav__img(src=item.img)
+                          a(href= item.url).nav__link.menu__link= item.name.toUpperCase()

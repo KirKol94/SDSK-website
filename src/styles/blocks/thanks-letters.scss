@@ -1,0 +1,66 @@
+.thanks-letters {
+  &__wrapper {
+    margin-top: $size-17xl;
+    padding-bottom: $size-13xl;
+    @include desktop {
+      margin-top: $size-23xl;
+      padding-bottom: $size-23xl;
+    }
+  }
+
+  &__title {
+    font-size: $fs-xxxxl;
+    @include desktop {
+      font-size: $fs-xxxxxxxxxls;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: $size-6xl;
+    @include desktop {
+      grid-template-columns: 1fr 82px;
+      margin-top: $size-10xl;
+    }
+  }
+
+  &__letter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: $size-10xl;
+    border: $border;
+    @include desktop {
+      padding: $size-13xl $size-18xl;
+    }
+  }
+
+  &__letter-img {
+    width: auto;
+    max-height: 376px;
+  }
+
+  &__letter-text {
+    margin-top: $size-6xl;
+    font-size: $fs-xxl;
+    @include desktop {
+      margin-top: $size-12xl;
+    }
+  }
+
+  &__controls {
+    display: none;
+
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__controls-btn {
+    height: 50%;
+    border: $border;
+  }
+}

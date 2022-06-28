@@ -1,0 +1,45 @@
+.logo {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: $size-xl 0;
+  @include desktop {
+    padding: 0;
+  }
+
+  &:hover {
+    color: $firm;
+  }
+
+  &__img {
+    z-index: 2;
+    width: $size-11xl;
+    @include desktop {
+      width: $size-16xls;
+    }
+  }
+
+  &__text {
+    z-index: 2;
+    margin-left: $size-m;
+    font-weight: 700;
+    font-size: $fs-xxxxxl;
+    transition: .3s;
+    @include tablet {
+      margin-left: $size-2xl;
+      font-size: $fs-xxxxxxxxxl;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: $size-m;
+    color: $gray;
+    font-weight: 500;
+    font-size: $size-s;
+    line-height: 110%;
+    letter-spacing: -0.01em;
+  }
+}

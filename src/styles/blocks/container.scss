@@ -1,0 +1,13 @@
+.container {
+	max-width: $mobile-width;
+	margin: 0 auto;
+	@include tablet {
+		max-width: $tablet-width;
+	}
+	@include notebook {
+		max-width: $notebook-width;
+	}
+	@include desktop {
+		max-width: $desktop-width;
+	}
+}

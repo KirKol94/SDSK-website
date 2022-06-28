@@ -1,0 +1,41 @@
+.feedback-modal {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: $fs-l;
+    @include tablet {
+      font-style: $fs-xxxxl;
+    }
+    @include desktop {
+      font-size: $fs-xxxxxxxxl;
+    }
+  }
+
+  &__description {
+    margin-top: $size-xs;
+    color: $light-gray;
+    font-size: $fs-s;
+    @include tablet {
+      font-size: $fs-xl;
+    }
+  }
+
+  &__img {
+    width: $size-14xl;
+    margin-top: $size-2xl;
+
+    &._hidden {
+      display: none;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin-top: $size-2xl;
+  }
+}

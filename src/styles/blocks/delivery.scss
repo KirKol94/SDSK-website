@@ -1,0 +1,49 @@
+.delivery {
+  margin-top: $size-17xl;
+  @include desktop {
+    margin-top: $size-23xl;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: $fs-xxxxl;
+    @include desktop {
+      font-size: $fs-xxxxxxxxxls;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    margin-top: $size-6xl;
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: $size-10xl;
+    }
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $size-2xl;
+    border: $border;
+    @include desktop {
+      padding: $size-10xl;
+    }
+  }
+
+  &__name {
+    margin-top: $size-6xl;
+    font-weight: 500;
+    font-size: $fs-xxl;
+    line-height: 120%;
+    @include desktop {
+      font-size: $fs-xxxxl;
+    }
+  }
+}

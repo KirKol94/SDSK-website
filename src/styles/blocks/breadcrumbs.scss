@@ -1,0 +1,18 @@
+.breadrumbs {
+  &__item {
+    margin-right: $size-xs;
+    font-size: $fs-xxxs;
+    letter-spacing: 0.02em;
+    opacity: 0.5;
+    transition: .2s;
+    @include tablet {
+      font-size: $fs-xxs;
+    }
+
+    &._link {
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+include ../../dates/catalog-items
+
+section.main-catalog
+    .container
+        h2.title.main-catalog__title Наш каталог
+
+        .main-catalog__wrapper
+            .main-catalog__items
+                each item in catalogItems
+                    .main-catalog__item
+                        .main-catalog__item-top
+                            img.main-catalog__img(src=item.imgSrc)
+                            h3.main-catalog__name= item.name
+                            p.main-catalog__description= item.description
+                            b.main-catalog__cost= item.cost
+                        .main-catalog__item-bottom
+                            button.btn.btn-contained.main-catalog__btn В корзину
+            a(href='/catalog.pug').btn.btn-contained.btn-w100.btn-with-img.main-catalog__all-catalog-btn
+                img(src='./svg/sprite.svg#grid-view-hover').btn__icon._img
+                span Весь каталог

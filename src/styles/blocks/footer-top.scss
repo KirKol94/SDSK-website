@@ -1,0 +1,44 @@
+.footer-top {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $size-2xl 0;
+  }
+
+  &__search-form {
+    position: relative;
+    display: none;
+    @include tablet {
+      display: block;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: $size-4xls;
+      transform: translateY(-50%);
+      content: url("./svg/sprite.svg#search");
+    }
+  }
+
+  &__search-input {
+    width: 416px;
+    padding-right: $size-14xl;
+    background: $bg-input-color url('./svg/sprite.svg#search');
+    border-radius: $size-xxxs;
+  }
+
+  &__search-link {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__search-icon {
+    width: $size-6xl;
+  }
+}
+
+
+

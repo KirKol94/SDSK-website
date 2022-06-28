@@ -1,0 +1,87 @@
+.main-intro {
+  background-color: $black;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: $size-12xl 0 $size-12xl;
+    @include tablet {
+      flex-direction: row;
+      padding: $size-12xl 0 $size-19xl;
+    }
+  }
+
+  &__title {
+    z-index: 2;
+    min-width: 250px;
+    max-width: 524px;
+    margin-top: $size-6xl;
+    font-weight: 500;
+    font-size: $fs-xxl;
+    @include tablet {
+      margin-top: 0;
+      font-size: $fs-xxxxxxxxl;
+    }
+  }
+
+  &__description {
+    z-index: 2;
+    min-width: 250px;
+    max-width: 524px;
+    margin-top: $size-2xl;
+    font-size: $fs-s;
+    line-height: 130%;
+    @include tablet {
+      font-style: $fs-l;
+      line-height: 150%;
+    }
+  }
+
+  &__left {
+    z-index: 2;
+  }
+
+  &__actions {
+    display: flex;
+    margin-top: $size-12xl;
+
+    :nth-child(2) {
+      margin-left: $size-xs;
+      @include tablet {
+        margin-left: $size-xl;
+      }
+    }
+  }
+
+  &__btn {
+    padding: $size-m $size-6xl;
+  }
+
+  &__img-wrapper {
+    position: relative;
+    z-index: 1;
+    padding: $size-l $size-9xl;
+    @include desktop {
+      padding: 0;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 200%;
+    background: rgb(255 122 0);
+    background: radial-gradient(circle, rgb(255 122 0 / 100%) 0%, rgb(8 50 48 / 0%) 61%);
+    @include tablet {
+      top: -200px;
+    }
+    @include desktop {
+      top: -300px;
+    }
+  }
+}

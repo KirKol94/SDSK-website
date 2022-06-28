@@ -1,0 +1,17 @@
+include ../../dates/news-items
+
+section.main-news
+	.container.main-news__wrapper
+		h1.title.main-news__title Новости
+			.main-news__items
+				each item in newsItems
+					.main-news__item
+						.main-news__item-top
+							img(src=item.imgSrc alt=item.title).main-news__item-img
+							h2.main-news__item-title= item.title
+							p.main-news__item-date= item.date
+						.main-news__item-bottom
+							button.btn.btn-contained.main-news__item-btn Подробнее
+			a(href='#').btn.btn-contained.btn-w100.btn-with-img.main-news__all-news-btn
+				img(src="./svg/sprite.svg#all-news-icon-white" alt="иконка новостей").btn__icon
+				span Все новости

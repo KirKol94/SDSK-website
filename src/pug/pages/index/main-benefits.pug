@@ -1,0 +1,13 @@
+include ../../dates/benefit-items
+
+section.main-benefits
+	.container.main-benefits__wrapper
+		h1.title.main-benefits__title Наши преимущества
+
+		.main-benefits__items
+			each benefit in benefits
+				.main-benefits__item
+					img.main-benefits__img(src=benefit.imgSrc alt=benefit.name)._img
+					img.main-benefits__img(src=benefit.imgHoverSrc alt=benefit.name)._img-hover
+					h2.main-benefits__name= benefit.name
+					p.main-benefits__description= benefit.description

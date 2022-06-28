@@ -1,0 +1,16 @@
+.navigation-line {
+  border-bottom: $border;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    padding: $size-2xl 0;
+    @include desktop {
+      padding: $size-7xl 0;
+    }
+  }
+}

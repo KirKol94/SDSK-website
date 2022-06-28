@@ -1,0 +1,12 @@
+.header {
+  background-color: transparent;
+
+  &__logo-description {
+    z-index: 1;
+    display: none;
+
+    @include desktop {
+      display: flex;
+    }
+  }
+}
