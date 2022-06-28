@@ -14,7 +14,8 @@
 				},
 		})
 
-		const warehouseSwiperBig = new Swiper('.js-warehouse-swiper-big', {
+		// warehouse slider big
+		new Swiper('.js-warehouse-swiper-big', {
 				effect: 'fade',
 				speed: 1000,
 				navigation: {
@@ -27,7 +28,7 @@
 		})
 
 		//	thanks letters slider
-		const thanksLettersSwiper = new Swiper('.js-thanks-letter-slider', {
+		new Swiper('.js-thanks-letter-slider', {
 				slidesPerView: 1.2,
 				loop: true,
 				zoom: {

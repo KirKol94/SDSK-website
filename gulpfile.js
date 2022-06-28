@@ -89,6 +89,7 @@ function bundleJsGenerator() {
 function imagesConverter() {
 		return src(`${path.img.src}/**/*.{jpg,jpeg,png,gif,}`)
 				.pipe(gulpIf(isBuild, webp()))
+				.pipe(src(`${path.img.src}/**/*.{jpg,jpeg,png,gif,}`))
 				.pipe(dest(path.img.dist))
 				.pipe(browserSync.stream())
 }

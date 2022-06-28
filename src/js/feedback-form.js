@@ -1,4 +1,4 @@
-(function () {
+!(function () {
 		const form = document.querySelector('.js-feedback-form')
 
 		const modal = document.querySelector('.js-feedback-modal')
